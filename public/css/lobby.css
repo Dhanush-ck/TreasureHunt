@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-image: url(../img/among-us.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container-element {
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    padding: 20px;
+    box-shadow: 
+        0 0 2px rgba(255, 255, 255, 0.6),
+        0 0 5px rgba(255, 255, 255, 0.4),
+        0 0 15px rgba(255, 255, 255, 0.2)
+    ;
+    z-index: 2;
+}
+
+.container-element h1 {
+    font-size: 2.4rem;
+}
+
+.container-element input {
+    width: 90%;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container-element input::placeholder {
+    color: white;
+}
+
+.content {
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#submit-btn {
+    width: 60%;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.error-holder {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.error {
+    width: auto;
+    height: 20px;
+    padding: 13px;
+    margin: 70px 0 0 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.container {
+    display: none;
+}
+
+#intro-loading {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/among-us.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#outro {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    display: none;
+}
+
+#intro-loading img {
+    border-radius: 15px;
+}
+
+
+
+.fadeOut {
+    animation: fadeOut 1s ease forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease forwards;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container-element {
+        width: 60%;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .container-element h1 {
+        font-size: 2rem;
+    }
+
+    .container-element input {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        line-height: 20px;
+    }
+
+    #submit-btn {
+        padding: 6px;
+        font-size: 1rem;
+    }
+
+    .error {
+        margin: 20px 0 0 0;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
