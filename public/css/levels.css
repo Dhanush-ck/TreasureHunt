@@ -159,3 +159,38 @@ body {
         opacity: 1;
     }
 }
+
+@media only screen and (max-width: 330px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container-element {
+        width: 60%;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .container-element h1 {
+        font-size: 2rem;
+    }
+
+    .container-element input {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        line-height: 20px;
+    }
+
+    #submit-btn, #next, #prev {
+        padding: 6px;
+        font-size: 1rem;
+    }
+
+    .error {
+        margin: 20px 0 0 0;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
