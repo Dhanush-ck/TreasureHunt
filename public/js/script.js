@@ -53,7 +53,10 @@ function register() {
                 password: password,
                 currentlevel: 1
             }).then(() => {
+                localStorage.setItem("username", username);
+                localStorage.setItem("level", 1);
                 console.log("User added successfully!");
+                window.location.href = './lobby.html';
             }).catch((error) => {
                 console.error("Error adding user: ", error);
             });
