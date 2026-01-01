@@ -49,7 +49,31 @@ function login() {
         localStorage.setItem("username", username);
         localStorage.setItem("level", data.currentLevel);
         console.log("Login Successfull");
-        // window.location.href = "game.html";
+        const level = data.currentlevel;
+        if(level == 1) {
+            window.location.href = "./levels/level1.html";
+        }
+        else if(level == 2) {
+            window.location.href = "./levels/level2.html";
+        }
+        else if(level == 3) {
+            window.location.href = "./levels/level3.html";
+        }
+        else if(level == 4) {
+            window.location.href = "./levels/level4.html";
+        }
+        else if(level == 5) {
+            window.location.href = "./levels/level5.html";
+        }
+        else if(level == 6) {
+            window.location.href = "./levels/level6.html";
+        }
+        else if(level == 7) {
+            window.location.href = "./levels/level7.html";
+        }
+        else {
+            window.location.href = "./levels/level8.html";
+        }
       } else {
         console.log("Wrong Password");
         errorMessage.innerHTML = "Wrong Password";
