@@ -5,6 +5,7 @@
       { "source": "/login", "destination": "/login.html"},
       { "source": "/logout", "destination": "/logout.html"},
       { "source": "/leaderboard", "destination": "/leaderboard.html"},
+      { "source": "/leaderboard-name", "destination": "/leaderboard_name.html"},
       { "source": "/tezoro", "destination": "/tezoro.html"},
       { "source": "/lobby", "destination": "/lobby.html"},
       { "source": "/level1", "destination": "/levels/level1.html"},
