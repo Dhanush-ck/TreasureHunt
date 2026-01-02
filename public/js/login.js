@@ -22,7 +22,7 @@ const errorMessage = document.querySelector('.error');
 submitBtn.addEventListener('click', login);
 
 function login() {
-  const username = document.getElementById('name').value;
+  const username = document.getElementById('name').value.trim();
   const password = document.getElementById('password').value;
   if(!username || username == " ") {
     errorMessage.innerHTML = "Name can't be empty";
