@@ -114,8 +114,9 @@ async function checkAnswer(userInput) {
         errorMessage.innerHTML = "Congratulations";
         messagePopup();
         await completeLevel();
-        // window.location.href = "../levels/level8.html";
+        set(ref(db, "users/" + username + "/currentlevel"), level + 1);
         console.log("Congratulations");
+        window.location.href = "../tezoro.html";
     }
     else {
         console.log("Wrong Answer");
