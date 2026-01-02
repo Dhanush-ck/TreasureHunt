@@ -18,7 +18,21 @@ const db = getDatabase(app);
 const level = 6;
 
 const username = localStorage.getItem("username");
-console.log(username);
+
+async function canPromoteBeyondLevel6() {
+  const snapshot = await get(ref(db, "users"));
+  
+  let count = 0;
+  
+  snapshot.forEach(userSnap => {
+    const currentLevel = userSnap.val().currentlevel;
+    if (currentLevel > 6) {
+      count++;
+    }
+  });
+  console.log(count);
+  return count < 4;
+}
 
 if (!username) {
   window.location.href = "../index.html";
@@ -119,12 +133,19 @@ async function checkAnswer(userInput) {
     
     if(userHash === correctAnswer){
         console.log("Correct Answer");
-        errorMessage.innerHTML = "Correct Answer";
-        messagePopup();
-        set(ref(db, "users/" + username + "/currentlevel"), level + 1);
-        await completeLevel();
-        markNextLevelStart();
-        window.location.href = "../levels/level7.html";
+        const allowed = await canPromoteBeyondLevel6();
+        if(allowed == true) {
+            errorMessage.innerHTML = "Correct Answer";
+            messagePopup();
+            set(ref(db, "users/" + username + "/currentlevel"), level + 1);
+            await completeLevel();
+            markNextLevelStart();
+            window.location.href = "../levels/level7.html";
+        }
+        else {
+            errorMessage.innerHTML = "You are late";
+            messagePopup();    
+        }
     }
     else {
         console.log("Wrong Answer");
