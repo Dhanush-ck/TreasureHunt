@@ -51,10 +51,10 @@ function register() {
             set(newUserRef, {
                 name: username,
                 password: password,
-                currentlevel: 1
+                currentlevel: 0
             }).then(() => {
                 localStorage.setItem("username", username);
-                localStorage.setItem("level", 1);
+                localStorage.setItem("level", 0);
                 console.log("User added successfully!");
                 window.location.href = './lobby.html';
             }).catch((error) => {
