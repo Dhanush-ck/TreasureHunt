@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getDatabase, ref, update, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBxFLQifojzsNjc98vCUPac8IYKzcfrneM",
@@ -62,6 +62,7 @@ async function checkAnswer(userInput) {
         outro.style.display = 'flex';
         setTimeout(async() => {
             await markLevelStart();
+            set(ref(db, "users/" + username + "/currentlevel"), 1);
             window.location.href = "./levels/level1.html";
         }, 2300);
     }
