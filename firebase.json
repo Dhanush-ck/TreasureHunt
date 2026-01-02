@@ -1,0 +1,26 @@
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      { "source": "/login", "destination": "/login.html"},
+      { "source": "/logout", "destination": "/logout.html"},
+      { "source": "/leaderboard", "destination": "/leaderboard.html"},
+      { "source": "/tezoro", "destination": "/tezoro.html"},
+      { "source": "/lobby", "destination": "/lobby.html"},
+      { "source": "/level1", "destination": "/levels/level1.html"},
+      { "source": "/level2", "destination": "/levels/level2.html"},
+      { "source": "/level3", "destination": "/levels/level3.html"},
+      { "source": "/level4", "destination": "/levels/level4.html"},
+      { "source": "/level5", "destination": "/levels/level5.html"},
+      { "source": "/level6", "destination": "/levels/level6.html"},
+      { "source": "/level7", "destination": "/levels/level7.html"},
+      { "source": "/level8", "destination": "/levels/level8.html"},
+      { "source": "/smart", "destination": "/levels/smart.html"}
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
