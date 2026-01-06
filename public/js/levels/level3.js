@@ -73,7 +73,7 @@ async function completeLevel() {
 
 const story = "Not all treasures are buried.<br>Some are grown,<br>watched more than visited.";
 
-const riddle = "I was not born of nature,<br>yet nature chose me.<br>I hold no fish,<br>but life still floats above me.<br>Find where beauty grows without soil."
+const riddle = "I am never used in comfort,<br>yet I am built with care.<br>I promise escape,<br>not arrival.<br>I am marked to be remembered,<br>but forgotten every day.<br>When danger speaks,<br>I become the only answer.<br>Find me where safety waits,<br>unseen until it matters."
 
 const inputTag = "<input type='text' id='answer' placeholder='Enter the answer'>";
 
