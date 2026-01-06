@@ -31,7 +31,7 @@ async function canPromoteBeyondLevel6() {
     }
   });
   console.log(count);
-  return count < 4;
+  return count < 5;
 }
 
 if (!username) {
