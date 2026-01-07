@@ -77,7 +77,7 @@ const next = document.getElementById('next');
 const prev = document.getElementById('prev');
 const submit = document.getElementById('submit-btn');
 
-const correctAnswer = "7394dff5ff0318ed754ed5b4799ecfd0f53deaa8d3b3548bdbc14f5b75081607";
+const correctAnswer = "61de225644215ca97d473e1eb9afcfdab2a6ecdb1a4f17473d960bc82c98fe24";
 
 content.innerHTML = story;
 
