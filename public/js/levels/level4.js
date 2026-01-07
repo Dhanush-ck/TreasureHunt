@@ -32,7 +32,7 @@ async function canPromoteBeyondLevel4() {
     }
   });
   console.log(count);
-  return count < 10;
+  return count < 15;
 }
 
 console.log(canPromoteBeyondLevel4());
