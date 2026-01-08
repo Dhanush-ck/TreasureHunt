@@ -22,6 +22,7 @@ async function getLevelCount() {
     const snapshot = await get(ref(db, "users"));
 
     let count = {
+        0: [],
         1: [],
         2: [],
         3: [],
